@@ -14,11 +14,13 @@ class SatuanResource extends JsonResource
      */
     public function toArray($request)
     {
-        'id_satuan' 		=> $this->id_satuan,
-		'kode_satuan' 		=> $this->kode_satuan,
-		'nama_satuan' 		=> $this->nama_satuan,
-		'id_user' 			=> $this->id_user,
-		'ip_add' 			=> $this->ip_add,
-		'last_update' 		=> $this->last_update,
+        return [
+            'id_satuan' 		=> $this->id_satuan,
+            'kode_satuan' 		=> $this->kode_satuan,
+            'nama_satuan' 		=> $this->nama_satuan,
+            'id_user' 			=> $this->id_user,
+            'ip_add' 			=> $this->ip_add,
+            'last_update' 		=> $this->last_update,
+        ];
     }
 }

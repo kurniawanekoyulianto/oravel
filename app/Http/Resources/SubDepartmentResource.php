@@ -14,12 +14,14 @@ class SubDepartmentResource extends JsonResource
      */
     public function toArray($request)
     {
-        'id_subdepartemen' => $this->id_subdepartemen,
-		'kode_subdepartemen' => $this->kode_subdepartemen,
-		'nama_subdepartemen' => $this->nama_subdepartemen,
-		'id_departemen' => $this->id_departemen,
-		'id_user' => $this->id_user,
-		'ip_add' => $this->ip_add,
-		'last_update' => $this->last_update,
+        return [
+            'id_subdepartemen' => $this->id_subdepartemen,
+            'kode_subdepartemen' => $this->kode_subdepartemen,
+            'nama_subdepartemen' => $this->nama_subdepartemen,
+            'id_departemen' => $this->id_departemen,
+            'id_user' => $this->id_user,
+            'ip_add' => $this->ip_add,
+            'last_update' => $this->last_update,
+        ];
     }
 }
