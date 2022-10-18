@@ -6,6 +6,7 @@ use App\Http\Controllers\API\DepartmentController;
 use App\Http\Controllers\API\SubDepartmentController;
 use App\Http\Controllers\API\MesinController;
 use App\Http\Controllers\API\SatuanController;
+use App\Http\Controllers\API\PeriodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Route::resource('/mchn', MesinController::class);
 // Insert master data satuan
 Route::resource('/uofm', SatuanController::class);
 
+// Insert master data periode
+Route::post('/prd', 'App\Http\Controllers\API\PeriodeController@store');
+
 // Insert data inspeksi header
 Route::post('/hd', 'App\Http\Controllers\API\InspeksiHeaderController@store');
 
@@ -42,3 +46,9 @@ Route::post('/dt', 'App\Http\Controllers\API\InspeksiDetailController@store');
 
 // Delete data inspeksi
 Route::delete('/cdet/{id}', 'App\Http\Controllers\API\InspeksiDetailController@destroy');
+
+// Delete data Periode
+Route::delete('/pdel/{id}', 'App\Http\Controllers\API\PeriodeController@destroy');
+
+// Update data Periode
+Route::put('/pupd', 'App\Http\Controllers\API\PeriodeController@update');

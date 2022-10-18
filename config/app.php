@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Jakarta',
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +155,7 @@ return [
     */
 
     'providers' => [
-	
+
 		Yajra\Oci8\Oci8ServiceProvider::class,
 
         /*
