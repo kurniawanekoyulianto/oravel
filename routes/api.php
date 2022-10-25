@@ -7,6 +7,7 @@ use App\Http\Controllers\API\SubDepartmentController;
 use App\Http\Controllers\API\MesinController;
 use App\Http\Controllers\API\SatuanController;
 use App\Http\Controllers\API\PeriodeController;
+use App\Http\Controllers\API\DefectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,12 @@ Route::delete('/pdel/{id}', 'App\Http\Controllers\API\PeriodeController@destroy'
 
 // Update data Periode
 Route::put('/pupd', 'App\Http\Controllers\API\PeriodeController@update');
+
+// Insert Data Defect
+Route::post('/dfct', 'App\Http\Controllers\API\DefectController@store');
+
+// Delete Data Defect
+Route::delete('/hdfct/{id}', 'App\Http\Controllers\API\DefectController@destroy');
+
+// Update data Defect
+Route::put('/udfct', 'App\Http\Controllers\API\DefectController@update');
