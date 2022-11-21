@@ -31,9 +31,8 @@ class DefectController extends Controller
 
     public function destroy($id){
         $id_defect = $id;
-        $id_defect = DB::select("SELECT ID_DEFECT FROM SOLOMURNI.TBL_MASTER_DEFECT WHERE ID_DEFECT='".$id_defect."'");
+        DB::table('SOLOMURNI.TBL_MASTER_DEFECT')->where('ID_DEFECT',$id_defect)->delete();
 
-        $defect    = DB::table('SOLOMURNI.TBL_MASTER_DEFECT')->where('ID_DEFECT',$id_defect)->delete();
     }
 
     public function update(Request $request){
